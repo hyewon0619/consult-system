@@ -1,0 +1,291 @@
+/* 화면 전용 레이아웃 표시 */
+.screen-only {
+  display: flex !important;
+}
+
+.step3-page-wrapper .home-btn {
+  position: fixed !important;
+  top: 30px !important;
+  right: 40px !important;
+  z-index: 9999;
+}
+
+.step3-layout {
+  display: flex;      
+  justify-content: center; 
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  align-items: flex-start;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+/* 상단/하단 섹션 구분 */
+.side-analysis-card.bottom-section {
+  flex: 1 1 auto;
+}
+
+.side-analysis-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 통계 정보 카드 (위쪽) */
+.stats-summary-card {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 35px;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.stats-summary-card .stat-item h3 {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.stats-summary-card .stat-item p {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  line-height: 1;
+}
+
+.combined-summary-card {
+  display: flex;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 35px 40px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+  gap: 20px;
+  align-items: center;
+  animation: fadeIn 0.5s ease-out;
+  flex-wrap: wrap;
+}
+
+.right-cases-column {
+  flex: 1.7;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 오른쪽 컬럼 상단/하단 섹션 */
+.right-top-section {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-bottom-section {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.step3-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* 컨테이너 상위 (스트리밍 영역 전체) */
+.streaming-preview {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* 텍스트가 담기는 박스 */
+.preview-box {
+  background-color: #ffffff;
+  border: 1.5px solid #edf2f7;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin: 25px;
+}
+
+/* 박스 내부 제목 */
+.preview-box h4 {
+  margin: 0 0 16px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 제목 앞에 강조점 효과 */
+.preview-box h4::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  background-color: #3182ce;
+  border-radius: 2px;
+}
+
+/* 실제 스트리밍되는 본문 텍스트 */
+.preview-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  white-space: pre-wrap;
+  word-break: break-all;
+  animation: textFadeIn 0.4s ease-out forwards;
+}
+
+
+/* 텍스트가 나타날 때 부드러운 효과 */
+@keyframes textFadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(5px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* 스트리밍 진행 중임을 알리는 커서 효과 */
+.preview-box.loading p::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 4px;
+  color: #3182ce;
+  animation: blink 0.8s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+/* 신뢰도 */
+.confidence-badges {
+  display: flex;
+  gap: 6px;
+}
+
+.confidence-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* label 배지 색상 */
+.confidence-badge.confidence-very-high {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.confidence-badge.confidence-high {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.confidence-badge.confidence-medium {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.confidence-badge.confidence-low {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+/* level, error 배지 */
+.confidence-badge.level,
+.confidence-badge.error {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+/* 슬라이더 컨트롤 */
+.slider-controls-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* 네비게이션 원형 버튼 */
+.nav-circle-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #e5e7eb;
+  background: white;
+  color: #64748b;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.nav-circle-btn:hover:not(:disabled) {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  transform: scale(1.1);
+}
+
+.nav-circle-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* 케이스 인디케이터 */
+.case-indicator {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.case-indicator .current {
+  font-size: 24px;
+  color: #2563eb;
+  font-weight: 800;
+}
+
+.case-indicator .divider {
+  font-size: 18px;
+  color: #cbd5e1;
+  font-weight: 400;
+}
+
+.case-indicator .total {
+  font-size: 16px;
+  color: #94a3b8;
+  font-weight: 600;
+}

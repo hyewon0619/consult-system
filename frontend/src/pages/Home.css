@@ -1,0 +1,138 @@
+/* Home.css */
+
+.home-fixed-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* 배경색을 흰색으로 변경 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.home-content-container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.home-header-section {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.home-header-section h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #2563eb; /* 제목 글자색 변경 */
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.home-header-section p {
+  font-size: 18px;
+  color: #64748b; /* 흰 배경에 맞춰 설명글 색상 조정 */
+  font-weight: 400;
+}
+
+.mode-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.mode-card-item {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 50px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f5f9; /* 카드 경계 구분을 위해 얇은 테두리 추가 */
+  transition: all 0.3s ease;
+}
+
+.mode-card-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle-container {
+  width: 110px;
+  height: 110px;
+  background-color: #eff6ff; /* 배경색과 어울리는 아주 연한 블루 */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.mode-main-icon {
+  font-size: 44px;
+}
+
+.mode-card-item h3 {
+  font-size: 24px;
+  color: #1e293b;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.mode-card-item p {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+  white-space: pre-line;
+  margin-bottom: 40px;
+  min-height: 48px;
+}
+
+.start-action-btn {
+  width: 100%;
+  background-color: #334155;
+  color: #ffffff;
+  border: none;
+  padding: 14px 0;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.start-action-btn:hover {
+  background-color: #2563eb;
+  transform: scale(1.02);
+}
+
+/* 반응형 모바일 대응 */
+@media (max-width: 900px) {
+  .home-fixed-wrapper {
+    overflow-y: auto;
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+  }
+  .mode-selection-grid {
+    grid-template-columns: 1fr;
+    padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,118 @@
+
+/* 페르소나 분석 섹션 전체 컨테이너 */
+.persona-analysis-wrapper {
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.persona-section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.persona-section-header .header-icon {
+  font-size: 17px;
+  background: #eff6ff;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.persona-section-header h5 {
+  margin: 0;
+  font-size: 19px;
+  color: #1e293b;
+  font-weight: 800;
+  border-left: none;
+  padding-left: 0;
+}
+
+.persona-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* 개별 카드 스타일 */
+.persona-box {
+  padding: 24px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease;
+}
+
+.persona-box:hover {
+  transform: translateY(-2px);
+}
+
+/* 의뢰인: 차분하고 따뜻한 톤 */
+.persona-box.layperson {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.persona-box.layperson .perspective-tag {
+  background: #64748b;
+  color: white;
+}
+
+.persona-box.layperson .state-highlight strong {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* 변호사: 신뢰감 있고 지적인 파란색 톤 */
+.persona-box.lawyer {
+  background: #f0f7ff;
+  border: 1px solid #dbeafe;
+}
+
+.persona-box.lawyer .perspective-tag {
+  background: #2563eb;
+  color: white;
+}
+
+/* 라벨 디자인 */
+.persona-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.perspective-tag {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.state-highlight, .strategy-highlight {
+  font-size: 18px;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.4;
+}
+
+/* 본문 텍스트 */
+.persona-content {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 16px;
+  border-radius: 10px;
+  min-height: 100px;
+}
+
+.persona-text {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.7;
+  word-break: keep-all;
+  white-space: pre-wrap;
+}

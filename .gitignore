@@ -1,0 +1,69 @@
+# [Python / FastAPI]
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# [Node / React]
+node_modules/
+/frontend/build/
+/frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+.stylelintcache
+
+# [AI / Machine Learning]
+*.pth
+*.onnx
+*.bin
+*.h5
+*.pkl
+*.weights
+models/
+data/
+datasets/
+.cache/huggingface/
+
+# [Environment Variables]
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# [OS / IDE]
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.mysql
+*.sql
+mysql.sock
+*.pid
+mysql/
+sql/
+
+/scripts_hw/
+# [생성 데이터 — 저장소에 담지 않는다]
+# 아래는 scripts/generate_sample_data.py 가 만들어내는 산출물이다.
+# 실제 사건 데이터가 실수로 커밋되는 것을 막기 위해 경로 자체를 제외한다.
+backend/scripts/old_case.json
+backend/legal_search_assets/
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# [Vite 개발 캐시]
+frontend/.vite/
+*.tsbuildinfo

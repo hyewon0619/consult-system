@@ -1,0 +1,32 @@
+.home-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #888;
+  padding: 8px;
+  /* border-radius: 50%; */
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.home-btn:hover {
+  color: #2563EB;
+  transform: scale(1.1);
+}
+
+.home-btn:focus {
+  outline: none;
+}
+
+.home-btn:focus-visible {
+  outline: 2px solid #888;;
+  outline-offset: 2px;
+}

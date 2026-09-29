@@ -1,0 +1,246 @@
+.step4-container {
+  max-width: 1400px;
+  margin: 20px;
+  position: relative;
+}
+
+.meta-settings {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.meta-settings h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.settings-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.setting-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.setting-item label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.report-header-badge {
+  font-size: 14px;
+  font-weight: 500;
+  color: #999;
+}
+
+.setting-item select {
+  padding: 10px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.setting-item select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.report-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.report-preview,
+.report-editor {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.report-preview h3,
+.report-editor h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 24px;
+}
+
+.report-content {
+  padding: 24px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.report-content h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.case-reference {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.report-content hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 24px 0;
+}
+
+.report-content section {
+  margin-bottom: 24px;
+}
+
+.report-content section strong {
+  display: block;
+  font-size: 16px;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.report-content section p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.result-box {
+  background: #dbeafe;
+  border-left: 4px solid #2563eb;
+  padding: 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #1e40af;
+}
+
+.signature {
+  text-align: right;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #1f2937;
+}
+
+.editor-textarea {
+  width: 100%;
+  min-height: 600px;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+.editor-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.report-editor .btn {
+  width: 100%;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .report-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .settings-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* 전체 컨테이너 */
+.auth-summary-wrapper {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* 상단 게이지 바 */
+.auth-visual-bar {
+  display: flex;
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bar-segment {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* 조직별 색상 팔레트 (임의 지정) */
+.color-0 { background: #4facfe; }
+.color-1 { background: #00f2fe; }
+.color-2 { background: #f093fb; }
+.color-3 { background: #f6d365; }
+.color-4 { background: #5ee7df; }
+
+/* 하단 카드 레이아웃 */
+.auth-org-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.org-group-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-left: 3px solid #4facfe; /* 포인트 컬러 */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.org-label {
+  font-weight: 700;
+  color: #333;
+  margin-right: 6px;
+}
+
+.rep-info {
+  color: #666;
+  cursor: help;
+}
+
+.extra-count {
+  font-style: normal;
+  color: #999;
+  font-size: 11px;
+  margin-left: 2px;
+}

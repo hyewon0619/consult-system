@@ -1,0 +1,214 @@
+
+/* 처분권자 정보 카드 (아래쪽) */
+.authority-info-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 35px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.authority-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.authority-banner-text {
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  color: #1e293b;
+}
+
+.authority-banner-text strong {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.auth-list-wrapper {
+  margin-top: 10px;
+}
+
+
+/* ========== 기관 태그 (클릭 가능) ========== */
+.name-tag-wrapper {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 8px;
+}
+
+.name-tag-wrapper:hover {
+  background: #f8fafc;
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+.name-tag-wrapper.active {
+  background: #f0f7ff;
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+.name-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.org-text-bold {
+  font-weight: 700;
+  font-size: 14px;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.name-text {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.more-indicator {
+  font-size: 13px;
+  color: #666;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+/* ========== 상세 정보 리스트 ========== */
+.org-detail-list-rounded {
+  margin-top: 12px;
+  padding: 16px;
+  background: #fafbfc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ========== 개인 정보 행 ========== */
+.person-row-vertical {
+  display: flex;
+  flex-direction: column; /* 전체를 위아래로 배치 */
+  gap: 12px;
+  padding: 16px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.person-row-vertical:last-child {
+  border-bottom: none;
+}
+
+/* ========== 이름 & 부서/직책 ========== */
+.person-main-info {
+  flex: 1;
+  min-width: 0; /* flexbox 텍스트 오버플로우 방지 */
+}
+
+.person-name-dept {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.p-traits-vertical {
+  display: flex;
+  flex-direction: column; /* 세로 나열 */
+  gap: 12px;               /* 아이템 사이의 상하 간격 (원하는 만큼 조절) */
+}
+
+.person-header-info {
+  display: flex;
+  gap: 10px;           /* 이름과 메타 정보 사이 간격 */
+  margin-bottom: 8px;  /* 하단 특성 영역과의 간격 */
+}
+
+.p-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #213547;
+}
+
+.p-meta-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.p-meta-item {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: #f1f1f1;
+}
+
+/* ========== 특성 배지 ========== */
+.p-traits {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  min-width: 200px; /* 특성 영역 최소 너비 확보 */
+}
+
+.trait-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.trait-label {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+  min-width: 50px;
+  align-self: center;
+}
+
+.t-badge {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  
+  white-space: normal;      
+  word-break: keep-all;      
+  overflow: visible;        
+  text-overflow: clip; 
+  
+  max-width: 250px;          
+  line-height: 1.4;       
+  display: inline-block;
+}
+
+.t-badge[title] {
+  cursor: help;
+}
+
+.t-badge:hover {
+  opacity: 0.8;
+}

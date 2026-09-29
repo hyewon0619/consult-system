@@ -1,0 +1,762 @@
+/* ========================================
+   PDF 전용 스타일 (상하 배치)
+   ======================================== */
+
+
+/* 섹션 전체 컨테이너 */
+.pdf-section-summary {
+  margin-bottom: 30px;
+  font-family: 'Pretendard', 'Nanum Gothic', sans-serif;
+  color: #333;
+}
+
+.pdf-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  border-left: 4px solid #1a3a6c;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+/* 기본 정보 박스 */
+.pdf-info-box {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* 요약 배너 (수행 경험 요약) */
+.pdf-authority-banner {
+  background-color: #f0f4fa; /* 연한 블루 톤 */
+  border-radius: 6px;
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #d1d9e6;
+}
+
+.pdf-banner-line {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.pdf-banner-line strong {
+  color: #1a3a6c;
+  font-weight: 700;
+}
+
+.pdf-auth-detail-area {
+  margin-top: 15px;
+}
+
+.pdf-auth-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a3a6c;
+  margin-bottom: 10px;
+}
+
+.pdf-auth-list-static {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열로 배치하여 공간 절약 */
+  gap: 10px;
+}
+
+.pdf-person-row {
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  padding: 10px;
+  page-break-inside: avoid; /* 페이지 넘김 시 잘림 방지 */
+}
+
+.pdf-p-name {
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.pdf-p-org {
+  font-size: 11px;
+  color: #888;
+}
+
+.pdf-auth-more-footer {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 11px;
+  color: #aaa;
+  padding-top: 5px;
+}
+
+
+/* PDF 약정금 통계 섹션 스타일 */
+.pdf-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.pdf-stat-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: transform 0.2s;
+}
+
+.pdf-stat-card.highlight {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 2px solid #2563eb;
+}
+
+.pdf-stat-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.pdf-stat-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pdf-stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pdf-stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.pdf-stat-value.main {
+  font-size: 24px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.pdf-stat-range {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.pdf-range-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.pdf-range-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.pdf-range-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.pdf-range-divider {
+  font-size: 12px;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.pdf-fee-note {
+  font-size: 11px;
+  color: #64748b;
+  text-align: center;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px dashed #e2e8f0;
+  margin-top: 10px;
+}
+
+
+/* 성향 배지 스타일 */
+.pdf-p-traits {
+  margin-top: 6px;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.pdf-t-badge {
+  background: #f2f2f2;
+  color: #555;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+}
+
+/* 소속, 부서, 직책 정보를 담는 컨테이너 */
+.pdf-p-org-info {
+  font-size: 9pt;
+  color: #666666; 
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pdf-p-org-info span + span::before {
+  content: " | ";
+  margin: 0 4px;
+  color: #ccc;
+  font-size: 8pt;
+}
+
+.pdf-only-container {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #ffffff;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.pdf-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #1e3a8a;
+}
+
+.pdf-header h1 {
+  color: #1e3a8a;
+  font-size: 22px; /* 축소 */
+  margin: 0;
+  font-weight: 800;
+}
+
+.pdf-section {
+  margin-bottom: 45px;
+  page-break-inside: avoid;
+}
+
+.pdf-section-title {
+  font-size: 17px;
+  color: #1e3a8a;
+  border-bottom: 2px solid #1e3a8a;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.pdf-topic-badge {
+  display: inline-block;
+  /* background: #1e3a8a; */
+  color: #1e3a8a;
+  border: 1px solid #1e3a8a;
+  padding: 5px 15px;
+  font-size: 13px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+    
+.pdf-subsection-title {
+  border-bottom: 2px solid #1e3a8a; 
+  padding: 0 5px 8px 5px; 
+  font-size: 15px; 
+  font-weight: 700;  
+  margin-bottom: 18px; 
+  display: block;
+  color: #1e3a8a;
+}
+
+.pdf-row {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+  align-items: flex-start;
+}
+
+.pdf-row:last-child {
+  border-bottom: none;
+}
+
+.pdf-row strong {
+  flex: 0 0 180px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pdf-row span {
+  flex: 1;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.pdf-summary-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #334155;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin-top: 10px;
+}
+
+.pdf-total-count-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* 사건 진단 섹션 */
+.pdf-diagnosis-section {
+  margin-top: 20px;
+}
+
+.diagnosis-box {
+  padding: 20px;
+}
+
+.diagnosis-item {
+  margin-bottom: 15px;
+}
+
+.diagnosis-item:last-child {
+  margin-bottom: 0;
+}
+
+.diagnosis-label {
+  display: block;
+  color: #2563eb; /* 포인트 블루 컬러 */
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.diagnosis-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
+  word-break: keep-all;
+  text-align: justify;
+}
+
+/* 분포도 섹션 */
+.pdf-distribution-section {
+  margin-top: 10px;
+}
+
+.pdf-stat-label-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  margin-top: 10px;
+}
+
+.pdf-stat-label-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+}
+
+.pdf-stat-count-text {
+  font-size: 13px;
+  color: #777;
+}
+
+/* 게이지 바 스타일 */
+.pdf-stat-gauge-bg {
+  width: 100%;
+  height: 12px;
+  background-color: transparent;
+  border: 1px solid #e2e8f0;  
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.pdf-stat-gauge-fill {
+  height: 100%;
+  background-color: transparent;
+  border-bottom: 3px solid #819636;
+}
+
+/* 출력 시 배경색이 나오게 하는 설정*/
+@media print {
+  .pdf-stat-gauge-fill {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+
+/* 유사 사례 카드 */
+.pdf-case-card {
+  margin: 10px !important;
+  padding: 35px 20px 45px 20px; /* 패딩 축소 */
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  page-break-inside: avoid;
+  background: #fafbfc;
+}
+
+.pdf-case-card h3 {
+  font-size: 13px;
+  color: #1e3a8a;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.pdf-case-tag {
+  display: inline-block;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pdf-match-rate {
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.pdf-case-content h4 {
+  font-size: 13px;
+  color: #1e3a8a;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.pdf-case-content p {
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 12px;
+  text-align: justify;
+  font-size: 14px;
+}
+
+.pdf-stats-vertical {
+  margin-top: 15px;
+}
+
+.pdf-lawyer-info {
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1e3a8a;
+  font-weight: 500;
+}
+
+.pdf-lawyer-info strong {
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.pdf-no-data {
+  text-align: center;
+  padding: 40px;
+  background: #f9fafb;
+  border-radius: 10px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.pdf-row.column-layout {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.pdf-row.column-layout strong {
+  flex: none;
+  width: 100%;
+  color: #2563eb;
+  margin-bottom: 4px;
+}
+
+.pdf-row.column-layout span {
+  flex: none;
+  width: 100%;
+  text-align: left;
+  padding-left: 5px;
+}
+
+/* PDF 내 중첩된 목록(Array) 스타일 */
+.pdf-list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.pdf-list-item-box {
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* PDF 내부의 태그 스타일 */
+.pdf-auth-list-area {
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.pdf-auth-label {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.pdf-auth-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pdf-auth-tag {
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #374151;
+}
+
+.pdf-auth-tag small {
+  color: #6b7280;
+  font-size: 10px;
+}
+
+.pdf-auth-more {
+  font-size: 12px;
+  color: #9ca3af;
+  align-self: center;
+  margin-left: 4px;
+}
+
+.pdf-row.empty-data {
+  background-color: #f9fafb;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+
+
+/* PDF 내 깊이(Depth) 제목 스타일 */
+.pdf-depth-title {
+  font-size: 14px;
+  color: #1e3a8a;
+  margin: 15px 0 8px 0;
+  font-weight: 700;
+}
+
+.pdf-label { font-weight: 600; color: #64748b; font-size: 14px; }
+.pdf-value { color: #1e293b; font-size: 14px; line-height: 1.6; }
+
+
+
+/* 각 페이지로 분리될 섹션 공통 스타일 */
+.pdf-section-info,
+.pdf-section-summary,
+.pdf-case-card {
+  padding: 30px 30px 40px 30px; /* 패딩 축소 */
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px !important;
+  border: none;
+}
+
+/* PDF confidence badges */
+.pdf-confidence-badge {
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.pdf-confidence-badge.confidence-very-high {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.pdf-confidence-badge.confidence-high {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.pdf-confidence-badge.confidence-medium {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.pdf-confidence-badge.confidence-low {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+.pdf-confidence-badge.level,
+.pdf-confidence-badge.error {
+  background-color: #f5f5f5;
+  color: #666;
+}
+/* 변호사 그리드 스타일 */
+.pdf-lawyers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.pdf-lawyer-item {
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.pdf-lawyer-name {
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.pdf-lawyer-cases {
+  margin-left: 10px;
+  color: #64748b;
+}
+
+/* 약정금 통계 기간별 블록 업데이트 */
+.pdf-period-block {
+  margin-bottom: 20px;
+  page-break-inside: avoid;
+}
+
+.pdf-period-label {
+  font-size: 15px;
+  color: #1e3a8a;
+  border-left: 4px solid #1e3a8a;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* 약정금 통계 그리드 */
+/* 기간별 3열 그리드 컨테이너 */
+.pdf-fee-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: #ffffff;
+  padding: 15px !important;
+}
+
+/* 개별 기간 카드 */
+.pdf-fee-period-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-fee-period-card.empty {
+  justify-content: center;
+  align-items: center;
+  background: #f9fafb;
+  border-style: dashed;
+}
+
+/* 기간 라벨 (최근 2개월 등) */
+.pdf-fee-period-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #dbeafe;
+}
+
+.pdf-fee-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 내부 항목 (약정금, 성공보수 등) */
+.pdf-fee-sub-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pdf-fee-sub-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.pdf-fee-sub-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.pdf-fee-sub-range {
+  font-size: 10px;
+  color: #94a3b8;
+  letter-spacing: -0.02em;
+}
+
+/* 비율 강조 스타일 */
+.pdf-fee-sub-item.highlight-ratio {
+  margin-top: 5px;
+  padding-top: 8px;
+  border-top: 1px dashed #cbd5e1;
+}
+
+.pdf-fee-sub-item.highlight-ratio .pdf-fee-sub-value {
+  color: #2563eb;
+  font-size: 15px;
+}
+
+.pdf-no-data-small {
+  font-size: 11px;
+  color: #94a3b8;
+}
